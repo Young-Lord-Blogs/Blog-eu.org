@@ -1,0 +1,192 @@
+/*哈哈，多半要出事*/
+
+/*https://github.com/mastermay/text-autospace.js
+中英文间自动添加空白*/
+html.han-la hanla:after {
+    content: " ";
+    display: inline;
+    font-family: Arial;
+    font-size: 0.89em;
+}
+
+html.han-la code hanla,
+html.han-la pre hanla,
+html.han-la kbd hanla,
+html.han-la samp hanla {
+    display: none;
+}
+
+html.han-la ol>hanla,
+html.han-la ul>hanla {
+    display: none;
+}
+
+/*复制的，rss图标显示*/
+.author-links>ul>li>.rss-button {
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.author-links>ul>li>.rss-button svg path {
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.author-links>ul>li>.rss-button,
+.author-links>ul>li>.rss-button:link,
+.author-links>ul>li>.rss-button:visited {
+    color: #fff;
+    background-color: orange;
+}
+
+.author-links>ul>li>.rss-button svg path,
+.author-links>ul>li>.rss-button:link svg path,
+.author-links>ul>li>.rss-button:visited svg path {
+    fill: #fff;
+}
+
+.root[data-is-touch="false"] .author-links>ul>li>.rss-button:hover {
+    color: #ffffff;
+    background-color: #dd9000;
+}
+
+.root[data-is-touch="false"] .author-links>ul>li>.rss-button:hover svg path {
+    fill: #fff;
+}
+
+.root[data-is-touch] .author-links>ul>li>.rss-button.active,
+.root[data-is-touch] .author-links>ul>li>.rss-button:active {
+    color: #fff;
+    background-color: #575757;
+}
+
+.root[data-is-touch] .author-links>ul>li>.rss-button.active svg path,
+.root[data-is-touch] .author-links>ul>li>.rss-button:active svg path {
+    fill: #fff;
+}
+
+.root[data-is-touch] .author-links>ul>li>.rss-button.focus {
+    color: default;
+    background-color: #2e2e2e;
+    box-shadow: 0 0 0 2px rgba(46, 46, 46, 0.4);
+}
+
+.root[data-is-touch] .author-links>ul>li>.rss-button.focus svg path {
+    fill: default;
+}
+
+.author-links>ul>li>.rss-button.disabled,
+.author-links>ul>li>.rss-button:disabled {
+    color: rgba(255, 255, 255, 0.4) !important;
+    background-color: #000 !important;
+}
+
+.author-links>ul>li>.rss-button.disabled svg path,
+.author-links>ul>li>.rss-button:disabled svg path {
+    fill: rgba(255, 255, 255, 0.4) !important;
+}
+
+/* 头像相关 */
+#LY_page_logo {
+    position: relative;
+    height: 100%;
+    aspect-ratio: 1/1;
+    /*圆角，去除间隔*/
+    border-radius: 10%;
+    margin: unset;
+}
+
+.header__brand {
+    /*使头像紧密贴边*/
+    height: 100%;
+}
+
+.header__brand > a {
+    /*增加留白*/
+    padding-left: 10px;
+}
+
+/*头像旋转，来自blog.csdn.net/a1669000102/article/details/107686399*/
+#LY_page_logo:hover {
+    transform: rotate(333turn);
+    transition-delay: 0.5s;
+    transition-property: all;
+    transition-duration: 30s;
+    transition-timing-function: cubic-bezier(.34, 0, .84, 1);
+}
+
+.container {
+    /*内容去除两侧空白*/
+    max-width: none;
+    padding-left: unset;
+    padding-right: unset;
+}
+
+#sidebar {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background-color: inherit;
+}
+
+.sidebar-toggle {
+    /*调节侧边栏开关到顶部的距离，防止移动端无法显示搜索按钮*/
+    position: absolute;
+    top: 3rem;
+}
+
+/*重载下字体（来自 Typecho）*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Source Sans Pro", "Hiragino Sans GB", "Microsoft Yahei", SimSun, Helvetica, Arial, Sans-serif, monospace;
+}
+
+.wrap {
+    font-family: "Source Sans Pro", "Hiragino Sans GB", "Microsoft Yahei", SimSun, Helvetica, Arial, Sans-serif, monospace;
+}
+
+.sidebar {
+    font-family: "Source Sans Pro", "Hiragino Sans GB", "Microsoft Yahei", SimSun, Helvetica, Arial, Sans-serif, monospace;
+}
+
+.pagination {
+    color: #585B63;
+}
+
+/* 分隔线 */
+hr {
+    height: 2px;
+    background: #575757;
+}
+
+.alert > p {
+    margin: 0 !important;
+}
+
+.page__search-modal {
+    /* 修复 Bootstrap 导致搜索框不显示的问题*/
+    display: block;
+}
+
+.search-box__icon-clear > button {
+    color: #fff;
+}
+
+/* 修复 plaintext 样式 */
+.highlight {
+    border-radius: 0 !important;
+}
+
+pre {
+    border-radius: 0.4rem !important;
+    padding: unset !important;
+}
+
+pre > code {
+    padding: 1rem 0 1rem 1rem !important;
+    display: block !important;
+}
