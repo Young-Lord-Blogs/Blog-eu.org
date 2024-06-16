@@ -1,0 +1,260 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+#
+# ,--------.      ,--.   ,--. ,--.
+# '--.  .--',---.  \  `.'  /,-'  '-.
+#    |  |  | .-. :  .'    \ '-.  .-'
+#    |  |  \   --. /  .'.  \  |  |
+#    `--'   `----''--'   '--' `--'
+
+
+
+
+## => Site Settings
+##############################
+# theme: jekyll-text-theme # YOU DONT'T NEED THIS LINE
+text_skin: default # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
+highlight_theme: default # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
+url     : https://young-lord.github.io # the base hostname & protocol for your site e.g. https://www.someone.com
+permanent_url: https://young-lord.github.io # 目前用于在多域名间共享评论区
+baseurl : "" # 假如你的博客是建在某个目录下的，请在这里加上目录名，并且下面配置的所有链接里的`/public`前也要加，即`/your_baseurl/public`。这一项结尾不要有'/'
+title   : LY 的博客
+title_description: ""
+website_meta_description: "LY 的博客 - 首页"
+
+webmaster_verifications: # <https://jekyll.github.io/jekyll-seo-tag/usage/>
+  google: n_6Fq4QB6tHtTsvnC9sq_rNbHxNGHpOxccySthREtIY
+  bing: 7352B9B70D905E86EB77F868689762ED
+  baidu: codeva-W6wVZqZpGo
+  baidu2: codeva-U9dHtUK8zI
+
+
+## => Language and Timezone
+##############################
+lang: zh-Hans # the language of your site, default as "en"
+timezone: Asia/Shanghai # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for the available values
+
+
+## => Author and Social
+##############################
+author:
+  type      : person # "person" (default), "organization"
+  name      : LY
+  url       : &github_profile_url https://github.com/Young-Lord
+#  avatar    : https://avatars.githubusercontent.com/Young-Lord # path or url of avatar image (square)
+  bio       : ""
+  email     : ly-niko@qq.com
+  email_url : &mailto_url mailto:ly-niko@qq.com
+  github    : Young-Lord
+
+
+## => GitHub Repository (if the site is hosted by GitHub)
+##############################
+repository: Young-Lord/Young-Lord.github.io
+repository_tree: master
+
+
+## => Paths
+##############################
+paths: # 注意，这里改了是没有用的，这里只是做一个标识
+  root    : "/"                  # title link url, "/" (default)
+  home    : "/"                  # home layout url, "/" (default)
+  archive : &archive_path "/archive"      # "/archive.html" (default)
+  rss     : &feed_path "/feed.xml"          # rss feed link , "/feed.xml" (default)
+
+feed:
+  path: *feed_path
+
+## => Post
+##############################
+## excerpt
+excerpt_separator: <!--more-->
+
+## license
+license: CC-BY-NC-SA-4.0 # "CC-BY-4.0", "CC-BY-SA-4.0", "CC-BY-NC-4.0", "CC-BY-ND-4.0", "CC-BY-NC-SA-4.0"
+# 更多自定义可以去改这两个文件：
+# _includes/article/footer/license.html
+# _data/licenses.yml
+
+## TOC（目录）
+toc:
+  selectors: "h1,h2,h3,h4,h5,h6" # "h1,h2,h3" (default)
+
+
+## => Markdown Enhancements
+##############################
+## Mathjax
+mathjax: true # false (default), true
+mathjax_autoNumber: # false (default), true
+
+## Mermaid
+mermaid: true # false (default), true
+
+## Chart
+chart: true # false (default), true
+
+
+## => Paginate
+##############################
+paginate: 8
+paginate_path: /page/:num # don't change this unless for special need
+
+
+## => Sources
+##############################
+sources: # bootcdn (default), unpkg
+
+
+## => Sharing
+##############################
+sharing:
+  provider: false # false (default), "addtoany", "addthis", "custom"
+
+## => Comments
+##############################
+comments:
+  provider: cusdis # false (default), "disqus", "gitalk", "valine", "custom", "cusdis"
+  cusdis:
+    app-id: "f9fae777-b249-44e5-b3b9-c4e6747a54b0"
+    # Change app-id to your own.
+## I use cusdis!
+## Other provider config is removed.
+
+## => Pageview
+##############################
+pageview:
+  provider: false # false (default), "leancloud", "custom"
+## I use busuanzi!在侧边栏那里可以配置！
+
+## => Search
+##############################
+search:
+  provider: default # "default" (default), false, "google", "custom"
+
+## => Analytics
+##############################
+analytics:
+  provider: false # false (default), "google", "custom"
+## FUCK GOOGLE!
+
+## => Copy code to clipboard by https://github.com/kitian616/jekyll-TeXt-theme/pull/218/files
+##############################
+copy_to_clipboard: true
+
+## => Build
+##############################
+markdown    : kramdown
+kramdown:
+  smart_quotes: apos,apos,quot,quot # 禁用自动转全角引号，默认值：lsquo,rsquo,ldquo,rdquo；参考：https://kramdown.gettalong.org/options.html#:~:text=by%3A%20RemoveHtmlTags%20converter-,smart_quotes,-Defines%20the%20HTML
+highlighter : rouge
+permalink   : /posts/:title
+
+exclude:
+  - CHANGELOG.md
+  - HOW_TO_RELEASE.md
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README-*.md
+  - README.md
+  - gulpfile.js
+  - jekyll-text-theme.gemspec
+  - package-lock.json
+  - package.json
+  - /docs
+  - /node_modules
+  - /screenshots
+  - /test
+  - /vendor
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: article
+      sharing: false
+      license: true
+      aside:
+        toc: true
+      show_edit_on_github: true
+      show_subscribe: false
+      pageview: true
+      pan_gu_zhi_bai: ture # 中英文自动添加空白
+
+
+## => Plugins
+##############################
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jemoji
+  - jekyll-seo-tag
+  - jekyll-redirect-from
+
+## wu-kan的侧边栏
+body: # 这个用不了，建议直接修改base.html
+  layout-reverse: true # 开启后sidebar在右边，反之左边
+  sidebar-overlay: true # 开启后正文不随sidebar移动而移动
+
+sidebar:
+  avatar: # 侧边栏显示的头像
+    enable: false
+    img: /public/image/iconSize600.png # 头像的地址
+    info: <br/>Niko Forever # 头像背后的信息
+  #description: '<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=280 height=210 src="//music.163.com/outchain/player?type=0&id=932740311&auto=0&height=430"></iframe>'
+  social:
+  - title: Mail
+    href: *mailto_url
+    class: 'fas fa-envelope'
+  - title: rss
+    href: *feed_path
+    class: 'fas fa-rss'
+  - title: HitGub
+    href: *github_profile_url
+    class: 'fab fa-github'
+  nav:
+  - title: '<i class="fas fa-home fa-fw"></i> 首页'
+    href: /
+  - title: '<i class="fab fa-readme fa-fw"></i> 关于 & 友链'
+    href: /about
+  - title: '<i class="fas fa-archive fa-fw"></i> 归档'
+    href: *archive_path
+  jekyll_table_of_contents:
+    enable: false
+    autoloader: /assets/js/jekyll_table_of_contents.js
+  busuanzi:
+    enable: true
+    src: https://cdn.bootcdn.net/ajax/libs/busuanzi/2.3.0/bsz.pure.mini.js
+    page_pv: # 页面访问量
+      alert: <i class="fas fa-eye fa-fw"></i>
+      unit: 次
+    site_pv: # 站点访问量
+      alert: <i class="fas fa-paw fa-fw"></i>
+      unit: 枚
+    site_uv: # 访客量
+      alert: <i class="fas fa-user-friends fa-fw"></i>
+      unit: 人
+  last_edit:
+    enable: true
+    alert: <i class="fas fa-user-edit fa-fw"></i>
+  run_time:
+    enable: true
+    src: /assets/js/run_time.js
+    start_time: '10/27/2019 11:32:12' # 这是我博客上线的时间
+    alert: <i class="fas fa-cog fa-spin fa-fw"></i>
+    day: 天
+    hour: 时
+    minute: 分
+    second: 秒
+  moe_icp:
+    enable: true
+    text: '<a href="https://icp.gov.moe/?keyword=20213444" target="_blank">萌ICP备20213444号</a>'
+  copyright:
+    enable: false
+    text: '<script async defer src="https://buttons.github.io/buttons.js"></script><a class="github-button" aria-label="Star Young-Lord/Young-Lord.github.io on GitHub" href="https://github.com/Young-Lord/Young-Lord.github.io" data-icon="octicon-star" data-show-count="true">Star</a>'
