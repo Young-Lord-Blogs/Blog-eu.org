@@ -1,0 +1,15 @@
+<!-- start custom head snippets -->
+{%- include snippets/get-sources.html -%}
+{%- assign _sources = __return -%}
+
+<link rel="preload" href="{{ _sources.twitter_bootstrap_css }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="{{ _sources.twitter_bootstrap_css }}"></noscript>
+<script src="{{ _sources.twitter_bootstrap_js }}" defer async></script>
+<script src="{{ _sources.sweetalert2 }}" defer async></script>
+<script src="{{ _sources.pinyin_pro }}" defer async></script>
+<link rel="stylesheet" href="/assets/css/lanyon/poole.min.css">
+<link rel="stylesheet" href="/assets/css/lanyon/syntax.min.css">
+<link rel="stylesheet" href="/assets/css/lanyon/lanyon.min.css">
+<link rel="stylesheet" href="/assets/css/wu-kan.css">
+<link rel="stylesheet" href="/assets/css/younglord.css">
+<!-- end custom head snippets -->
