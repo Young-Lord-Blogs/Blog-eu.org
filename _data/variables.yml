@@ -1,0 +1,62 @@
+default:
+  text_skin: default
+  highlight_theme: default
+  lang: en
+  paths:
+    root: /
+    home: /
+    archive:  /archive.html
+    rss:  /feed.xml
+  mathjax: false
+  mathjax_autoNumber: false
+  mermaid: false
+  chart: false
+  toc:
+    selectors: 'h1,h2,h3'
+  sources: sustech
+  copy_to_clipboard: true
+
+  page:
+    mode: normal
+    type: webpage
+    article_header:
+      align: left
+      theme: light
+    articles:
+      show_cover: true
+      show_excerpt: false
+      show_readmore: false
+      show_info: false
+    show_title: true
+    show_edit_on_github: false
+    show_date: true
+    show_tags: true
+    show_author_profile: false
+    show_subscribe: false
+    full_width: false
+    sharing: false
+    comment: true
+    license: false
+    pageview: false
+    search: default
+    pan_gu_zhi_bai: true
+
+sources:
+  sustech:
+    font_awesome: 'https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/font-awesome/5.15.1/css/all.min.css'
+    jquery: 'https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/jquery/3.1.1/jquery.min.js'
+    leancloud_js_sdk: ''
+    chart: 'https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js'
+    gitalk:
+      js: ''
+      css: ''
+    valine: ''
+    mathjax: 'https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/mathjax/2.7.4/config/TeX-MML-AM_CHTML.js'
+    mermaid: 'https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/mermaid/8.0.0/mermaid.min.js'
+    clipboard: 'https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/clipboard.js/2.0.10/clipboard.min.js'
+    # custom.html
+    sweetalert2: 'https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/sweetalert2/11.7.3/sweetalert2.all.min.js'
+    pinyin_pro: 'https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/pinyin-pro/3.16.6/index.js'
+    twitter_bootstrap_js: 'https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/twitter-bootstrap/5.2.3/js/bootstrap.bundle.min.js'
+    twitter_bootstrap_css: 'https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/twitter-bootstrap/5.2.3/css/bootstrap.min.css'
+    busuanzi: 'https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/busuanzi/2.3.0/bsz.pure.mini.js'
